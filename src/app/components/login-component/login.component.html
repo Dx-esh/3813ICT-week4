@@ -1,0 +1,94 @@
+<div class="login-container">
+
+  <h1>Test App</h1>
+  <h2>Login</h2>
+
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+  
+    <div class="mb-3">
+      <label for="email" class="form-label">Username</lavel>
+      <input type="text" 
+        class="form-control" 
+        id="email" name="email" 
+        placeholder="Enter username" 
+        required 
+        [(ngModel)]="email">
+    </div>
+
+    <div class="mb-4">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" 
+        class="form-control" 
+        id="password" name="password" 
+        placeholder="Enter password" 
+        required 
+        [(ngModel)]="password">
+    </div>
+
+    <button mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="loginForm.invalid">
+      Login
+    </button>
+
+  </form>
+
+  <p>
+    Don't have an account?
+    <a routerLink="/">Sign Up</a>
+  </p>
+
+  <div id="messages"
+  [class.show]="message()"
+  [class.success]="messageType === 'success'"
+  [class.fail]="messageType === 'fail'"
+  >{{message()}}</div>
+</div>
+
+
+
+
+
+
+
+<!--
+<div class="login-container">
+
+  <h1>Test App</h1>
+  <h2>Login</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+
+      <input matInput type="email"
+        formControlName="email">
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+
+      <input matInput type="password"
+        formControlName="password">
+
+    </mat-form-field>
+
+    <button mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="loginForm.invalid">
+      Login
+    </button>
+
+  </form>
+
+  <p>
+    Don't have an account?
+    <a routerLink="/">Sign Up</a>
+  </p>
+
+</div>
+-->
