@@ -20,11 +20,11 @@ const users = [
 ];
 
 router.post('/', (req, res) => {
-    const { username, password } = req.body;
-    console.log('Login request: ', username);
+    const { email, password } = req.body;
+    console.log('Login request: ', email);
 
     const user = users.find(
-        user => user.username === username && user.password === password);
+        user => user.email === email && user.password === password);
 
     if (user) {
         res.json({ username: user.username, birthDate: user.birthDate, age: user.age, email: user.email, valid: true });

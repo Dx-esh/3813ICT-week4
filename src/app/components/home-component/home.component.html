@@ -1,7 +1,15 @@
 <nav>
-  <a routerLink="/profile">Profile</a>
+  <a mat-raised-button routerLink="/home">
+    Home
+  </a>
 
-  <button (click)="logout()">Logout</button>
+  <a mat-raised-button routerLink="/profile">
+    Profile
+  </a>
+
+  <button mat-raised-button (click)="logout()">
+    Logout
+  </button>
 </nav>
 
 <router-outlet></router-outlet>

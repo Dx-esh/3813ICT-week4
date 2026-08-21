@@ -48,7 +48,7 @@ export class LoginComponent {
           this.messageType = 'success';
           this.message.set('Login successful');
 
-          this.router.navigate(['/profile']);
+          this.router.navigate(['/home']);
 
         } else {
           this.messageType = 'fail';

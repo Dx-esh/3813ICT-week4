@@ -1,11 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-profile-component',
   standalone: true,
   imports: [
+    RouterModule,
+    MatButtonModule,
     FormsModule
   ],
   templateUrl: './profile.component.html',
